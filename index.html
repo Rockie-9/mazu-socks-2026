@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>腳踏實地 平安順行｜2026 白沙屯媽祖進香 襪子結緣</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700&family=Noto+Serif+TC:wght@600;700;900&display=swap" rel="stylesheet">
+<style>
+:root{--cream:#FEFCF7;--parchment:#FAF0E1;--warm-bg:#F7EAD6;--surface:#FFFFFF;--surface-warm:#FAF5EB;--b9:#2C1A0E;--b8:#3D2614;--b7:#5C3D1A;--b6:#7A6B55;--b5:#8B7D6B;--b4:#A89878;--b3:#C4B49A;--b2:#D8CCBA;--b1:#E8DBC8;--g7:#8B6914;--g5:#B8860B;--g4:#D4A853;--g3:#E8C878;--g2:#F0DCA0;--g1:#F7EAD6;--sans:'Noto Sans TC',-apple-system,sans-serif;--serif:'Noto Serif TC',Georgia,serif}
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:var(--sans);background:var(--cream);color:var(--b9);line-height:1.85;font-size:15px;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+
+/* Hero */
+.hero{min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:60px 24px;background:radial-gradient(ellipse at 50% 0%,rgba(212,168,83,.08) 0%,transparent 60%),radial-gradient(ellipse at 50% 100%,rgba(139,105,20,.05) 0%,transparent 50%),var(--cream);position:relative;overflow:hidden}
+.hero::before{content:'';position:absolute;inset:0;background:url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M30 5 L35 25 L55 30 L35 35 L30 55 L25 35 L5 30 L25 25 Z' fill='none' stroke='%23D4A853' stroke-width='.3' opacity='.08'/%3E%3C/svg%3E");opacity:.5}
+.hero-c{position:relative;z-index:1;max-width:600px}
+.hero .mantra{font-size:11px;letter-spacing:8px;color:var(--b4);margin-bottom:24px}
+.orn{display:flex;align-items:center;gap:12px;margin:0 auto}
+.orn .line{flex:1;height:1px;background:var(--g4);opacity:.4}
+.orn .dia{width:6px;height:6px;background:var(--g4);transform:rotate(45deg);opacity:.6}
+.hero h1{font-family:var(--serif);font-size:clamp(36px,8vw,56px);color:var(--b7);letter-spacing:10px;line-height:1.3;margin-bottom:16px;font-weight:900}
+.hero .sub{font-size:17px;color:var(--g7);font-weight:500;letter-spacing:3px;margin-bottom:8px}
+.hero .year{font-size:13px;color:var(--b4);letter-spacing:2px;margin-bottom:32px}
+.hero .stats{display:flex;gap:24px;justify-content:center;flex-wrap:wrap;margin-bottom:40px}
+.stat-item{text-align:center;padding:0 16px}
+.stat-num{font-family:var(--serif);font-size:28px;font-weight:700;color:var(--b7);line-height:1.2}
+.stat-label{font-size:11px;color:var(--b4);letter-spacing:2px;margin-top:4px}
+.scroll-hint{font-size:12px;color:var(--b3);letter-spacing:2px;animation:fl 2s ease-in-out infinite}
+.scroll-hint span{display:block;font-size:18px;margin-top:4px}
+@keyframes fl{0%,100%{transform:translateY(0)}50%{transform:translateY(6px)}}
+
+/* Layout */
+.wrap{max-width:680px;margin:0 auto;padding:0 24px}
+section{padding:64px 0}
+section+section{border-top:1px solid var(--b1)}
+.sl{font-size:10px;letter-spacing:6px;color:var(--g7);text-transform:uppercase;margin-bottom:12px;font-weight:500}
+section h2{font-family:var(--serif);font-size:24px;font-weight:700;color:var(--b7);margin-bottom:20px;line-height:1.4}
+section p{color:var(--b6);margin-bottom:16px}
+section p strong{color:var(--b8)}
+
+/* Story */
+.story{font-size:16px;line-height:2;color:var(--b6);max-width:560px}
+.hl{color:var(--b7);font-weight:500;background:linear-gradient(transparent 60%,var(--g2) 60%);padding:0 2px}
+
+/* Origin */
+.oq{background:var(--parchment);border-radius:10px;padding:28px 32px;margin:24px 0;position:relative}
+.oq::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--g4),var(--g7),var(--g4));border-radius:10px 10px 0 0}
+.oq p{font-size:15px;line-height:2;color:var(--b7);margin-bottom:12px}
+.oq p:last-of-type{margin-bottom:0}
+.oq .names{font-size:13px;color:var(--b4);margin-top:16px;padding-top:12px;border-top:1px solid var(--b2);text-align:right;letter-spacing:1px}
+
+/* Info cards */
+.ic{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--b1);border-radius:10px;overflow:hidden;margin:24px 0}
+.ic-item{background:var(--surface);padding:20px 22px}
+.ic-item .lb{font-size:10px;letter-spacing:2px;color:var(--b4);text-transform:uppercase;margin-bottom:6px}
+.ic-item .vl{font-size:14px;color:var(--b8);font-weight:500}
+@media(max-width:480px){.ic{grid-template-columns:1fr}}
+
+/* Budget */
+.bc{background:var(--surface);border:1px solid var(--b1);border-radius:10px;overflow:hidden;margin:20px 0}
+.br{display:flex;justify-content:space-between;align-items:center;padding:14px 22px;font-size:14px;color:var(--b6)}
+.br:nth-child(even){background:var(--surface-warm)}
+.br .am{font-weight:500;color:var(--b8);white-space:nowrap}
+.bt{display:flex;justify-content:space-between;align-items:center;padding:16px 22px;background:var(--g1);font-weight:700;font-size:16px;color:var(--b7);border-top:2px solid var(--g4)}
+
+/* Overflow */
+.ob{background:var(--parchment);border-radius:10px;padding:28px;margin:24px 0;position:relative}
+.ob::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--g4),var(--g7),var(--g4));border-radius:10px 10px 0 0}
+.ob h3{font-family:var(--serif);font-size:16px;color:var(--b7);margin-bottom:14px}
+.op{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:16px}
+.op-item{background:var(--surface);border-radius:8px;padding:18px;border:1px solid var(--b1);text-align:center}
+.op-item .icon{font-size:24px;margin-bottom:8px}
+.op-item .t{font-size:13px;font-weight:600;color:var(--b7);margin-bottom:6px}
+.op-item .d{font-size:12px;color:var(--b5);line-height:1.6}
+@media(max-width:480px){.op{grid-template-columns:1fr}}
+
+/* Callout */
+.co{background:var(--parchment);border-left:3px solid var(--g5);border-radius:0 8px 8px 0;padding:14px 18px;margin:16px 0;font-size:13px;color:var(--b7);line-height:1.7}
+
+/* Promise */
+.pg{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin:20px 0}
+.pi{background:var(--surface);border:1px solid var(--b1);border-radius:10px;padding:22px 16px;text-align:center;transition:transform .2s}
+.pi:hover{transform:translateY(-2px)}
+.pi .pn{font-family:var(--serif);font-size:28px;color:var(--g7);margin-bottom:8px;line-height:1}
+.pi .pt{font-size:13px;font-weight:600;color:var(--b7);margin-bottom:6px}
+.pi .pd{font-size:11px;color:var(--b5);line-height:1.6}
+@media(max-width:540px){.pg{grid-template-columns:1fr}}
+
+/* Route */
+.rv{display:flex;align-items:flex-start;justify-content:center;padding:28px 0;gap:0;flex-wrap:nowrap;overflow-x:auto}
+.rn{text-align:center;min-width:80px}
+.rn .dot{width:14px;height:14px;border-radius:50%;background:var(--g4);border:3px solid var(--parchment);margin:0 auto 8px;box-shadow:0 0 0 2px var(--g7)}
+.rn .nm{font-size:13px;font-weight:600;color:var(--b7)}
+.rn .dt{font-size:10px;color:var(--b4);margin-top:2px}
+.rc{flex-shrink:0;width:40px;height:2px;margin-top:6px;background:repeating-linear-gradient(90deg,var(--g4) 0,var(--g4) 4px,transparent 4px,transparent 8px)}
+@media(max-width:480px){.rv{flex-direction:column;align-items:center}.rc{width:2px;height:28px;margin:0;background:repeating-linear-gradient(180deg,var(--g4) 0,var(--g4) 4px,transparent 4px,transparent 8px)}}
+.ol{margin:20px 0}
+.oi{display:flex;gap:16px;padding:16px 0;border-bottom:1px solid var(--b1);align-items:flex-start}
+.oi:last-child{border-bottom:none}
+.oi .mk{width:8px;height:8px;border-radius:50%;background:var(--g5);margin-top:7px;flex-shrink:0}
+.oi .on{font-size:14px;font-weight:600;color:var(--b7)}
+.oi .od{font-size:12px;color:var(--b5);margin-top:2px}
+
+/* Timeline */
+.tl{position:relative;padding-left:32px;margin:20px 0}
+.tl::before{content:'';position:absolute;left:9px;top:8px;bottom:8px;width:1px;background:var(--b2)}
+.ti{position:relative;margin-bottom:22px}
+.ti::before{content:'';position:absolute;left:-27px;top:7px;width:10px;height:10px;border-radius:50%;background:var(--cream);border:2px solid var(--g7)}
+.ti .tw{font-size:12px;color:var(--g7);font-weight:600;letter-spacing:1px}
+.ti .tt{font-size:14px;color:var(--b6);margin-top:2px}
+
+.sn{font-size:12px;color:var(--b4);font-style:italic;margin:8px 0 16px}
+
+/* ===== CTA ===== */
+.cta{background:var(--b8);border-radius:12px;padding:48px 28px 40px;text-align:center;margin:40px 0;position:relative;overflow:hidden}
+.cta::before{content:'';position:absolute;inset:0;background:url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M20 2 L23 16 L38 20 L23 24 L20 38 L17 24 L2 20 L17 16 Z' fill='none' stroke='%23D4A853' stroke-width='.2' opacity='.1'/%3E%3C/svg%3E")}
+.cta *{position:relative;z-index:1}
+.cta .ey{font-size:10px;letter-spacing:6px;color:var(--g4);margin-bottom:14px}
+.cta h2{font-family:var(--serif);font-size:26px;color:#fff;margin-bottom:8px}
+.cta .cs{font-size:14px;color:rgba(255,255,255,.6);margin-bottom:28px}
+
+/* Bank */
+.pay-area{max-width:400px;margin:0 auto}
+.bank-box{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);border-radius:8px;padding:16px 20px;margin-bottom:8px}
+.bank-row{display:flex;justify-content:space-between;align-items:center;padding:6px 0;border-bottom:1px solid rgba(255,255,255,.06)}
+.bank-row:last-child{border-bottom:none}
+.bank-lb{font-size:11px;color:rgba(255,255,255,.4)}
+.bank-vl{font-size:14px;color:#fff;font-weight:500;letter-spacing:1px}
+.copy-btn{background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.2);border-radius:4px;padding:4px 10px;font-size:11px;color:rgba(255,255,255,.7);cursor:pointer;transition:all .2s;font-family:var(--sans)}
+.copy-btn:hover{background:rgba(255,255,255,.2);color:#fff}
+.copy-btn.ok{background:#06C755;border-color:#06C755;color:#fff}
+.bank-note{font-size:10px;color:rgba(255,255,255,.3);text-align:center;margin-bottom:20px}
+
+/* Divider in CTA */
+.cta-div{height:1px;background:rgba(255,255,255,.1);margin:28px 0 24px}
+
+/* Inline form */
+.form-area{max-width:400px;margin:0 auto;text-align:left}
+.form-area .fl{font-size:10px;letter-spacing:4px;color:var(--g4);margin-bottom:14px;text-align:center}
+.form-area label{display:block;font-size:12px;color:rgba(255,255,255,.5);margin-bottom:4px;margin-top:14px}
+.form-area label:first-of-type{margin-top:0}
+.form-area input,.form-area textarea{width:100%;padding:12px 14px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.15);border-radius:6px;color:#fff;font-size:14px;font-family:var(--sans);transition:border-color .2s}
+.form-area input:focus,.form-area textarea:focus{outline:none;border-color:var(--g4)}
+.form-area input::placeholder,.form-area textarea::placeholder{color:rgba(255,255,255,.25)}
+.form-area textarea{height:60px;resize:none}
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.submit-btn{display:block;width:100%;margin-top:20px;padding:14px;background:var(--g7);color:#fff;border:none;border-radius:8px;font-size:15px;font-weight:600;cursor:pointer;font-family:var(--sans);letter-spacing:1px;transition:all .2s}
+.submit-btn:hover{background:var(--g5);transform:translateY(-1px)}
+.submit-btn:active{transform:translateY(0)}
+.submit-btn:disabled{opacity:.5;cursor:not-allowed;transform:none}
+.form-msg{text-align:center;margin-top:12px;font-size:13px;min-height:20px}
+.form-msg.success{color:#06C755}
+.form-msg.error{color:#E87040}
+
+.cta .note{font-size:12px;color:rgba(255,255,255,.35);margin-top:24px}
+.cta .note strong{color:rgba(255,255,255,.55)}
+.founders{display:flex;justify-content:center;gap:24px;margin-top:16px;font-size:13px;color:rgba(255,255,255,.4)}
+.founders span{letter-spacing:2px}
+
+/* ===== DONATION WALL ===== */
+.wall{padding:48px 0}
+.wall h2{font-family:var(--serif);font-size:22px;font-weight:700;color:var(--b7);margin-bottom:6px;text-align:center}
+.wall .wall-sub{font-size:13px;color:var(--b4);text-align:center;margin-bottom:24px}
+.wall-stats{display:flex;justify-content:center;gap:32px;margin-bottom:28px}
+.ws{text-align:center}
+.ws .ws-num{font-family:var(--serif);font-size:36px;font-weight:700;color:var(--b7);line-height:1.1}
+.ws .ws-lb{font-size:11px;color:var(--b4);letter-spacing:2px;margin-top:4px}
+/* Progress bar */
+.progress{max-width:400px;margin:0 auto 28px;padding:0 20px}
+.progress-bar{height:8px;background:var(--b1);border-radius:4px;overflow:hidden}
+.progress-fill{height:100%;background:linear-gradient(90deg,var(--g7),var(--g4));border-radius:4px;transition:width .8s ease}
+.progress-text{display:flex;justify-content:space-between;font-size:11px;color:var(--b4);margin-top:6px}
+/* Donor list */
+.donor-list{max-height:300px;overflow-y:auto;border:1px solid var(--b1);border-radius:10px;background:var(--surface)}
+.donor-item{display:flex;justify-content:space-between;align-items:center;padding:12px 20px;border-bottom:1px solid var(--b1);font-size:14px}
+.donor-item:last-child{border-bottom:none}
+.donor-item:nth-child(even){background:var(--surface-warm)}
+.donor-name{color:var(--b7);font-weight:500}
+.donor-amount{color:var(--g7);font-weight:600;font-family:var(--serif)}
+.wall-loading{text-align:center;padding:40px;color:var(--b4);font-size:13px}
+.wall-empty{text-align:center;padding:40px;color:var(--b4);font-size:14px}
+
+/* Closing */
+.closing{text-align:center;padding:56px 24px 48px;border-top:2px solid var(--g4);margin-top:20px}
+.closing blockquote{font-family:var(--serif);font-size:clamp(16px,4vw,20px);color:var(--b7);font-style:italic;line-height:1.8}
+.closing .by{font-size:13px;color:var(--b4);margin-top:20px;letter-spacing:1px}
+.closing .orn-e{width:80px;margin:24px auto 0;display:flex;align-items:center;gap:8px}
+.closing .orn-e .line{flex:1;height:1px;background:var(--g4);opacity:.3}
+.closing .orn-e .dia{width:5px;height:5px;background:var(--g4);transform:rotate(45deg);opacity:.4}
+
+@media print{.hero{min-height:auto;padding:40px 24px}.cta{background:var(--surface);color:var(--b8);border:2px solid var(--b7)}}
+</style>
+</head>
+<body>
+
+<!-- HERO -->
+<div class="hero"><div class="hero-c">
+  <div class="mantra">個人發心 · 隨喜結緣</div>
+  <div class="orn" style="width:120px;margin-bottom:20px"><div class="line"></div><div class="dia"></div><div class="line"></div></div>
+  <h1>腳踏實地<br>平安順行</h1>
+  <div class="sub">2026 白沙屯媽祖北港進香</div>
+  <div class="year">歲次丙午年 · 襪子結緣 × 偏鄉關懷</div>
+  <div class="orn" style="width:200px;margin-bottom:32px"><div class="line" style="background:linear-gradient(90deg,transparent,var(--g4),transparent)"></div><div style="font-size:16px;color:var(--g4);opacity:.6">✦</div><div class="line" style="background:linear-gradient(90deg,transparent,var(--g4),transparent)"></div></div>
+  <div class="stats">
+    <div class="stat-item"><div class="stat-num">1,000<span style="font-size:16px;font-family:var(--sans);font-weight:400">+</span></div><div class="stat-label">雙機能襪</div></div>
+    <div class="stat-item"><div class="stat-num">8</div><div class="stat-label">天 7 夜徒步</div></div>
+    <div class="stat-item"><div class="stat-num">400</div><div class="stat-label">公里進香路</div></div>
+  </div>
+  <div class="scroll-hint">向下了解更多<span>↓</span></div>
+</div></div>
+
+<div class="wrap">
+
+<!-- 緣起 -->
+<section>
+  <div class="sl">緣起</div>
+  <h2>走過的人都知道，<br>一雙好襪子有多重要</h2>
+  <div class="oq">
+    <p>2025 年，我們一行好友第一次跟著白沙屯媽祖走。八天的路上，沿途無數素未謀面的香燈腳遞水、送飯、替我們貼腳底，那份毫無保留的善意，深深刻在心裡。</p>
+    <p>走完那趟路，我們決定：<strong>2026 年，換我們來照顧更多走在路上的人。</strong></p>
+    <div class="names">計畫發起人 —— 林晏亦、林政威</div>
+  </div>
+  <div class="story">
+    <p>今年 4/12 媽祖再次起駕，8 天 7 夜徒步到北港，來回四百公里。我們準備了<span class="hl">至少 1,000 雙機能襪</span>，想在繞境沿途送給走到腳痠的香燈腳，讓大家走得更踏實。每一雙都會附上一張結緣小卡，帶著我們共同的祝福上路。</p>
+    <p>如果大家的心意超過了目標，多出來的資源不會浪費——<span class="hl">加碼更多雙襪子</span>，或是<span class="hl">全數捐給繞境沿線的偏鄉弱勢團體</span>。</p>
+  </div>
+  <div class="ic">
+    <div class="ic-item"><div class="lb">進香期程</div><div class="vl">4/12 起駕 → 4/16 抵北港 → 4/20 回鑾</div></div>
+    <div class="ic-item"><div class="lb">路線範圍</div><div class="vl">苗栗 → 台中 → 彰化 → 雲林北港</div></div>
+    <div class="ic-item"><div class="lb">結緣品</div><div class="vl">1,000+ 雙機能襪 + 結緣小卡</div></div>
+    <div class="ic-item"><div class="lb">發起身份</div><div class="vl">個人發心，純信仰行為</div></div>
+  </div>
+</section>
+
+<!-- 預算 -->
+<section>
+  <div class="sl">預算</div>
+  <h2>錢怎麼用，清清楚楚</h2>
+  <div class="bc">
+    <div class="br"><span>襪子成本（1,000 雙 × $60）</span><span class="am">$60,000</span></div>
+    <div class="br"><span>結緣小卡印製 1,000 張</span><span class="am">$2,500</span></div>
+    <div class="br"><span>包裝耗材 + 物流運送</span><span class="am">$3,500</span></div>
+    <div class="bt"><span>募款目標</span><span>$66,000</span></div>
+  </div>
+  <div class="sn">＊以單雙估計 $60 元計算，實際依供應商報價微調。</div>
+  <div class="ob">
+    <h3>如果超過目標了？</h3>
+    <p style="font-size:14px;color:var(--b6);margin-bottom:0">大家的心意多出來不會浪費，我們會走兩條路：</p>
+    <div class="op">
+      <div class="op-item"><div class="icon">🧦</div><div class="t">加碼襪子數量</div><div class="d">繼續採購機能襪，讓更多香燈腳收到結緣</div></div>
+      <div class="op-item"><div class="icon">🏡</div><div class="t">捐助沿線偏鄉</div><div class="d">直接捐贈給繞境路線上的弱勢團體與獨居長輩</div></div>
+    </div>
+    <div class="co" style="margin-top:16px;margin-bottom:0">因為跟著媽祖走沒有確定的路線，如果進香結束後仍有未發完的襪子或剩餘經費，我們會將全數轉為物資或款項，捐贈給沿線偏鄉弱勢團體。一分一毫都不會留在手上。</div>
+  </div>
+</section>
+
+<!-- 承諾 -->
+<section>
+  <div class="sl">承諾</div>
+  <h2>每一分錢，都可以被驗證</h2>
+  <p>我們承諾做到三件事：</p>
+  <div class="pg">
+    <div class="pi"><div class="pn">壹</div><div class="pt">公開捐助對象</div><div class="pd">列出具體捐給<br>哪些單位、各多少錢</div></div>
+    <div class="pi"><div class="pn">貳</div><div class="pt">附上捐款憑證</div><div class="pd">捐款收據或<br>物資簽收照片</div></div>
+    <div class="pi"><div class="pn">參</div><div class="pt">完整收支明細</div><div class="pd">每筆收入與支出<br>全數透明公開</div></div>
+  </div>
+</section>
+
+<!-- 偏鄉 -->
+<section>
+  <div class="sl">偏鄉關懷</div>
+  <h2>媽祖走過的路，<br>也是他們每天生活的地方</h2>
+  <p>繞境路線從苗栗到雲林，經過的很多鄉鎮是台灣最典型的偏鄉——青壯外流、獨居老人多、社福資源少。超出的款項與物資，我們會優先送往這些地方：</p>
+  <div class="rv">
+    <div class="rn"><div class="dot"></div><div class="nm">苗栗</div><div class="dt">通霄 · 苑裡</div></div><div class="rc"></div>
+    <div class="rn"><div class="dot"></div><div class="nm">台中</div><div class="dt">大甲 · 清水</div></div><div class="rc"></div>
+    <div class="rn"><div class="dot"></div><div class="nm">彰化</div><div class="dt">芳苑 · 伸港</div></div><div class="rc"></div>
+    <div class="rn"><div class="dot"></div><div class="nm">雲林</div><div class="dt">褒忠 · 北港</div></div>
+  </div>
+  <div class="ol">
+    <div class="oi"><div class="mk"></div><div><div class="on">華山基金會 沿線天使站</div><div class="od">到宅服務失能、失依、失智獨居長輩，物資可在例行訪視時直接送到長輩手中</div></div></div>
+    <div class="oi"><div class="mk"></div><div><div class="on">芳苑 / 褒忠鄉 社區關懷據點</div><div class="od">整條路線上最弱勢的鄉鎮，提供日間照顧、長照服務、共餐</div></div></div>
+    <div class="oi"><div class="mk"></div><div><div class="on">雲林聖心社會關懷協會</div><div class="od">覆蓋虎尾、土庫、褒忠地區的獨居長者整合關懷服務</div></div></div>
+  </div>
+  <div class="sn">＊具體捐助哪些單位及金額，將於進香結束後確認並公告，以上為優先方向。</div>
+</section>
+
+<!-- 回饋 -->
+<section>
+  <div class="sl">回饋</div>
+  <h2>你的名字，跟著媽祖一起走</h2>
+  <div class="tl">
+    <div class="ti"><div class="tw">贊助後</div><div class="tt">你的名字手寫在<strong>感恩名單</strong>上，進香 8 天全程隨身攜帶，在北港朝天宮進火儀式時向媽祖稟報。</div></div>
+    <div class="ti"><div class="tw">4/12 – 4/20 進香期間</div><div class="tt">我們每日<strong>照片記錄</strong>發放過程，透過 LINE 即時分享給你。</div></div>
+    <div class="ti"><div class="tw">4 月底</div><div class="tt">完整<strong>成果報告</strong>：發放現場照片、完整收支明細、偏鄉捐助憑證，一次回傳。</div></div>
+  </div>
+</section>
+
+<!-- ===== CTA: DONATE ===== -->
+<div class="cta" id="donate">
+  <div class="ey">隨喜贊助</div>
+  <h2>有心就好，金額不拘</h2>
+  <div class="cs">不論金額大小，都是一份走在路上的祝福</div>
+
+  <div class="pay-area">
+    <!-- Bank account -->
+    <div class="bank-box">
+      <div class="bank-row">
+        <span class="bank-lb">銀行</span>
+        <span class="bank-vl">台新銀行 (812)</span>
+      </div>
+      <div class="bank-row">
+        <span class="bank-lb">帳號</span>
+        <span class="bank-vl" id="acct">2888-10-0171304-3</span>
+        <button class="copy-btn" onclick="copyAcct()">複製帳號</button>
+      </div>
+      <div class="bank-row">
+        <span class="bank-lb">分行</span>
+        <span class="bank-vl">敦南分行 (0023)</span>
+      </div>
+    </div>
+    <div class="bank-note">轉帳後請填寫下方登記表，讓我們把你的名字帶上路</div>
+  </div>
+
+  <!-- Divider -->
+  <div class="cta-div"></div>
+
+  <!-- Inline form -->
+  <div class="form-area">
+    <div class="fl">轉帳後請登記 — 感恩名單</div>
+    <form id="donateForm" onsubmit="return false;">
+      <div class="form-row">
+        <div>
+          <label for="f-name">姓名 *</label>
+          <input type="text" id="f-name" placeholder="你的姓名" required>
+        </div>
+        <div>
+          <label for="f-amount">贊助金額 *</label>
+          <input type="number" id="f-amount" placeholder="例：1000" required min="1">
+        </div>
+      </div>
+      <label for="f-last5">轉帳帳號末五碼</label>
+      <input type="text" id="f-last5" placeholder="方便我們核對" maxlength="5">
+      <label for="f-msg">想對媽祖說的話（選填）</label>
+      <textarea id="f-msg" placeholder="寫下你的祝福..."></textarea>
+      <button type="button" class="submit-btn" id="submitBtn" onclick="submitDonation()">登記感恩名單</button>
+      <div class="form-msg" id="formMsg"></div>
+    </form>
+  </div>
+
+  <div class="note">
+    <strong>如果不方便贊助也完全沒關係，幫忙轉發就是很大的支持 🙏</strong>
+  </div>
+  <div class="founders">
+    <span>計畫發起人</span>
+    <span>林晏亦 · 林政威</span>
+  </div>
+</div>
+
+<!-- ===== DONATION WALL ===== -->
+<div class="wall" id="wall">
+  <h2>功德牆</h2>
+  <div class="wall-sub">即時更新 · 感謝每一位走在路上的人</div>
+
+  <!-- Stats -->
+  <div class="wall-stats">
+    <div class="ws"><div class="ws-num" id="w-count">-</div><div class="ws-lb">位贊助者</div></div>
+    <div class="ws"><div class="ws-num" id="w-total">-</div><div class="ws-lb">累計金額</div></div>
+  </div>
+
+  <!-- Progress bar -->
+  <div class="progress">
+    <div class="progress-bar"><div class="progress-fill" id="w-bar" style="width:0%"></div></div>
+    <div class="progress-text"><span id="w-pct">0%</span><span>目標 $66,000</span></div>
+  </div>
+
+  <!-- Donor list -->
+  <div id="donor-list" class="donor-list">
+    <div class="wall-loading" id="w-loading">載入中...</div>
+  </div>
+</div>
+
+<!-- CLOSING -->
+<div class="closing">
+  <blockquote>「媽祖走過的路，<br>也是他們每天生活的地方。」</blockquote>
+  <div class="by">林晏亦 · 林政威　｜　2026 白沙屯媽祖丙午年北港進香</div>
+  <div class="orn-e"><div class="line"></div><div class="dia"></div><div class="line"></div></div>
+</div>
+<div style="height:40px"></div>
+</div>
+
+<script>
+// ============================
+// CONFIG — 請替換以下兩個 URL
+// ============================
+const WEBHOOK_POST = 'https://rockie-lin.app.n8n.cloud/webhook/mazu-donation-submit';
+const WEBHOOK_GET  = 'https://rockie-lin.app.n8n.cloud/webhook/mazu-donation-wall';
+const GOAL = 66000;
+
+// ============================
+// Copy account number
+// ============================
+function copyAcct() {
+  const raw = document.getElementById('acct').textContent.replace(/-/g, '');
+  navigator.clipboard.writeText(raw).then(() => {
+    const btn = document.querySelector('.copy-btn');
+    btn.textContent = '已複製 ✓';
+    btn.classList.add('ok');
+    setTimeout(() => { btn.textContent = '複製帳號'; btn.classList.remove('ok'); }, 2000);
+  }).catch(() => {
+    // Fallback for older browsers
+    const ta = document.createElement('textarea');
+    ta.value = raw;
+    document.body.appendChild(ta);
+    ta.select();
+    document.execCommand('copy');
+    document.body.removeChild(ta);
+    const btn = document.querySelector('.copy-btn');
+    btn.textContent = '已複製 ✓';
+    btn.classList.add('ok');
+    setTimeout(() => { btn.textContent = '複製帳號'; btn.classList.remove('ok'); }, 2000);
+  });
+}
+
+// ============================
+// Submit donation form
+// ============================
+async function submitDonation() {
+  const btn = document.getElementById('submitBtn');
+  const msg = document.getElementById('formMsg');
+  const name = document.getElementById('f-name').value.trim();
+  const amount = parseInt(document.getElementById('f-amount').value);
+  const last5 = document.getElementById('f-last5').value.trim();
+  const message = document.getElementById('f-msg').value.trim();
+
+  if (!name || !amount) {
+    msg.className = 'form-msg error';
+    msg.textContent = '請填寫姓名和金額';
+    return;
+  }
+
+  btn.disabled = true;
+  btn.textContent = '登記中...';
+  msg.className = 'form-msg';
+  msg.textContent = '';
+
+  try {
+    const res = await fetch(WEBHOOK_POST, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ name, amount, last5digits: last5, message })
+    });
+    const data = await res.json();
+
+    if (data.success) {
+      msg.className = 'form-msg success';
+      msg.textContent = '🙏 登記成功，媽祖保佑！你的名字已列入感恩名單。';
+      // Clear form
+      document.getElementById('f-name').value = '';
+      document.getElementById('f-amount').value = '';
+      document.getElementById('f-last5').value = '';
+      document.getElementById('f-msg').value = '';
+      // Refresh wall after 1s
+      setTimeout(loadWall, 1000);
+    } else {
+      throw new Error(data.error || '登記失敗');
+    }
+  } catch (err) {
+    msg.className = 'form-msg error';
+    msg.textContent = '登記時發生錯誤，請稍後再試或直接聯繫發起人。';
+  }
+
+  btn.disabled = false;
+  btn.textContent = '登記感恩名單';
+}
+
+// ============================
+// Load donation wall
+// ============================
+async function loadWall() {
+  const listEl = document.getElementById('donor-list');
+  const loadEl = document.getElementById('w-loading');
+
+  try {
+    const res = await fetch(WEBHOOK_GET);
+    const data = await res.json();
+
+    // Update stats
+    document.getElementById('w-count').textContent = data.count || 0;
+    document.getElementById('w-total').textContent = '$' + (data.total || 0).toLocaleString();
+
+    // Progress bar
+    const pct = Math.min(Math.round(((data.total || 0) / GOAL) * 100), 100);
+    document.getElementById('w-bar').style.width = pct + '%';
+    document.getElementById('w-pct').textContent = pct + '%';
+
+    // Donor list
+    if (!data.donors || data.donors.length === 0) {
+      listEl.innerHTML = '<div class="wall-empty">尚無登記紀錄，成為第一位贊助者吧！</div>';
+      return;
+    }
+
+    listEl.innerHTML = data.donors.map(d =>
+      '<div class="donor-item">' +
+        '<span class="donor-name">' + escHtml(d.name) + '</span>' +
+        '<span class="donor-amount">$' + (d.amount || 0).toLocaleString() + '</span>' +
+      '</div>'
+    ).join('');
+
+  } catch (err) {
+    if (loadEl) loadEl.textContent = '功德牆載入失敗，請重新整理頁面。';
+  }
+}
+
+function escHtml(s) {
+  const d = document.createElement('div');
+  d.textContent = s;
+  return d.innerHTML;
+}
+
+// Load wall on page load
+document.addEventListener('DOMContentLoaded', loadWall);
+</script>
+
+</body>
+</html>
