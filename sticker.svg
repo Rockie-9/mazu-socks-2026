@@ -19,6 +19,8 @@
         <polygon points="0,-75 10,-60 -10,-60" fill="#B87A6E"/>
         <rect x="-6" y="-78" width="12" height="8" rx="2" fill="#C9967E"/>
         <path d="M-65,-55 L65,-55 L55,-40 L-55,-40 Z" fill="#D4A08E"/>
+        <path d="M-68,-55 Q-72,-48 -65,-45" fill="none" stroke="#C4887A" stroke-width="2"/>
+        <path d="M68,-55 Q72,-48 65,-45" fill="none" stroke="#C4887A" stroke-width="2"/>
         <rect x="-55" y="-40" width="110" height="70" rx="4" fill="#D4A08E"/>
         <rect x="-48" y="-33" width="96" height="56" rx="3" fill="#E8C4B0"/>
         <line x1="-30" y1="-33" x2="-30" y2="23" stroke="#C9967E" stroke-width="1.5" opacity="0.6"/>
@@ -31,10 +33,12 @@
         <g transform="rotate(8,-45,35)">
           <line x1="-45" y1="30" x2="-45" y2="52" stroke="#C4887A" stroke-width="1"/>
           <ellipse cx="-45" cy="58" rx="8" ry="10" fill="#D4A08E"/>
+          <ellipse cx="-45" cy="58" rx="5" ry="7" fill="#E8C4B0"/>
         </g>
         <g transform="rotate(-8,45,35)">
           <line x1="45" y1="30" x2="45" y2="52" stroke="#C4887A" stroke-width="1"/>
           <ellipse cx="45" cy="58" rx="8" ry="10" fill="#D4A08E"/>
+          <ellipse cx="45" cy="58" rx="5" ry="7" fill="#E8C4B0"/>
         </g>
       </g>
     </g>
@@ -44,30 +48,46 @@
       font-weight="500" font-family="Noto Sans CJK TC,sans-serif" letter-spacing="2">媽祖的愛 · 回饋鄉親</text>
     <line x1="210" y1="95" x2="450" y2="95" stroke="#C4887A" stroke-width="0.6" opacity="0.3"/>
 
-    <!-- Main blessing — tightened -->
+    <!-- Main blessing -->
     <text x="330" y="178" text-anchor="middle" fill="#3D2B20" font-size="64" font-weight="900"
       font-family="Noto Serif CJK TC,serif" letter-spacing="8">腳踏實地</text>
     <text x="330" y="250" text-anchor="middle" fill="#3D2B20" font-size="54" font-weight="700"
       font-family="Noto Serif CJK TC,serif" letter-spacing="6">平安順行</text>
 
-    <!-- Mission tagline -->
-    <text x="330" y="285" text-anchor="middle" fill="#7A5C4F" font-size="12"
-      font-weight="400" font-family="Noto Sans CJK TC,sans-serif" letter-spacing="1.5" opacity="0.75">1,000 雙結緣 · 200 雙送暖偏鄉</text>
+    <!-- English -->
+    <text x="330" y="280" text-anchor="middle" fill="#7A5C4F" font-size="11"
+      font-family="Georgia,serif" font-style="italic" letter-spacing="2" opacity="0.55">Walk with faith, walk in peace.</text>
 
-    <line x1="240" y1="300" x2="420" y2="300" stroke="#C4887A" stroke-width="0.5" opacity="0.25"/>
+    <!-- Mission tagline: keyword-based, no numbers -->
+    <g opacity="0.75">
+      <g transform="translate(178,300) scale(0.65)">
+        <path d="M6,0 C6,0 5,0 5,1 L5,14 C5,15 4,17 2,18 C0,19 0,21 1,22 C2,23 4,23 6,22 L10,19 C12,17 13,15 13,14 L13,1 C13,0 12,0 12,0 Z"
+          fill="none" stroke="#A07060" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+        <line x1="5" y1="4" x2="13" y2="4" stroke="#A07060" stroke-width="1" opacity="0.5"/>
+      </g>
+      <text x="330" y="314" text-anchor="middle" fill="#7A5C4F" font-size="12.5"
+        font-weight="500" font-family="Noto Sans CJK TC,sans-serif" letter-spacing="1.5">香燈腳護足結緣 · 需求團體送暖</text>
+      <g transform="translate(474,300) scale(-0.65,0.65)">
+        <path d="M6,0 C6,0 5,0 5,1 L5,14 C5,15 4,17 2,18 C0,19 0,21 1,22 C2,23 4,23 6,22 L10,19 C12,17 13,15 13,14 L13,1 C13,0 12,0 12,0 Z"
+          fill="none" stroke="#A07060" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+        <line x1="5" y1="4" x2="13" y2="4" stroke="#A07060" stroke-width="1" opacity="0.5"/>
+      </g>
+    </g>
 
-    <!-- QR CODE — 200 units = 20mm on finished sticker -->
-    <rect x="230" y="312" width="200" height="200" rx="6" fill="white"/>
-    <image x="236" y="318" width="188" height="188" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAkQAAAJEAQMAAADNLqkZAAAABlBMVEU9KyD///8LHjqFAAACOklEQVR42u3dMW7DMAwFUKMX8P1vqRu4QZDWFsm4LVCAGp6HIK3jN2j4IBhK2bZ47cfjGt/vHtf57ryRHts+tv+6SCQSifSn6wzpM7Mfcf16mW7U2f7804qTSCRSY45f3+0puJ/3XqX49sr29JgVJ5FIpJVyfGqfXAvvcf2cHCeRSKSlc/w+wuU4iUQirZPjqQ2eY/3M9tB/0R8nkUik5hyvyvNfvFhxEolEWiLHj9vr9ZHx84eHFSeRSKSmejx0TqYBlXrkcEtTiXKcRCKRmnP8KHrhYZJ8+l+KeitOIpFIXX2VkM976JcUJXupWHESiURqyvHQOQm98Dc7O6dSXI6TSCRScz0eiu20n3MK7tRXGVacRCKR2nN8aqSEUvztmSu+5ySRSKT+HE/T4OFsw+kjYavQ1C634iQSidSU42dlfsx9732u0Ued/F93rTiJRCKtkOPVts3r15nV/LgcJ5FIpMYcr6fBpz0/b7fkmx8nkUikFerxaoqw6rBUk+SXSUUrTiKRSE31+HFzzPi1KK+6KYccJ5FIpBXq8fAutFTqXsv5xG7ukEQikZrr8eqUw2ui57nDdFi5FSeRSKSuejyX52HG8Ob3gHbzKiQSidSe4z/+HlCd3qHDYsVJJBKpMcdDcFf7gJ5X1R83d0gikUjL5fjNPqAxP7F9B7y+ColEIq1Uj4/ixna7S8iKk0gkUmOOp8PFw9xh/vWIdEKiepxEIpG6cvxNeZ7OUhmpPz6dXW7FSSQSqUP6BDYJA5fVcfefAAAAAElFTkSuQmCC"/>
+    <line x1="240" y1="330" x2="420" y2="330" stroke="#C4887A" stroke-width="0.5" opacity="0.25"/>
+
+    <!-- QR Code — 200 units = 20mm -->
+    <rect x="230" y="342" width="200" height="200" rx="6" fill="white"/>
+    <image x="236" y="348" width="188" height="188" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAkQAAAJEAQMAAADNLqkZAAAABlBMVEU9KyD///8LHjqFAAACOklEQVR42u3dMW7DMAwFUKMX8P1vqRu4QZDWFsm4LVCAGp6HIK3jN2j4IBhK2bZ47cfjGt/vHtf57ryRHts+tv+6SCQSifSn6wzpM7Mfcf16mW7U2f7804qTSCRSY45f3+0puJ/3XqX49sr29JgVJ5FIpJVyfGqfXAvvcf2cHCeRSKSlc/w+wuU4iUQirZPjqQ2eY/3M9tB/0R8nkUik5hyvyvNfvFhxEolEWiLHj9vr9ZHx84eHFSeRSKSmejx0TqYBlXrkcEtTiXKcRCKRmnP8KHrhYZJ8+l+KeitOIpFIXX2VkM976JcUJXupWHESiURqyvHQOQm98Dc7O6dSXI6TSCRScz0eiu20n3MK7tRXGVacRCKR2nN8aqSEUvztmSu+5ySRSKT+HE/T4OFsw+kjYavQ1C634iQSidSU42dlfsx9732u0Ued/F93rTiJRCKtkOPVts3r15nV/LgcJ5FIpMYcr6fBpz0/b7fkmx8nkUikFerxaoqw6rBUk+SXSUUrTiKRSE31+HFzzPi1KK+6KYccJ5FIpBXq8fAutFTqXsv5xG7ukEQikZrr8eqUw2ui57nDdFi5FSeRSKSuejyX52HG8Ob3gHbzKiQSidSe4z/+HlCd3qHDYsVJJBKpMcdDcFf7gJ5X1R83d0gikUjL5fjNPqAxP7F9B7y+ColEIq1Uj4/ixna7S8iKk0gkUmOOp8PFw9xh/vWIdEKiepxEIpG6cvxNeZ7OUhmpPz6dXW7FSSQSqUP6BDYJA5fVcfefAAAAAElFTkSuQmCC"/>
 
     <!-- Scan instruction -->
-    <text x="330" y="535" text-anchor="middle" fill="#7A5C4F" font-size="12"
+    <text x="330" y="566" text-anchor="middle" fill="#7A5C4F" font-size="12"
       font-weight="400" font-family="Noto Sans CJK TC,sans-serif" letter-spacing="1" opacity="0.7">掃碼了解詳情與贊助方式</text>
 
     <!-- Bottom -->
-    <text x="330" y="575" text-anchor="middle" fill="#C4887A" font-size="10"
+    <text x="330" y="600" text-anchor="middle" fill="#C4887A" font-size="10"
       font-weight="400" font-family="Noto Sans CJK TC,sans-serif" letter-spacing="2" opacity="0.45">丙午年 · 白沙屯媽祖北港進香</text>
-    <text x="330" y="595" text-anchor="middle" fill="#C4887A" font-size="9"
+    <text x="330" y="618" text-anchor="middle" fill="#C4887A" font-size="9"
       font-weight="400" font-family="Noto Sans CJK TC,sans-serif" letter-spacing="1.5" opacity="0.3">2026.04.12 – 04.20</text>
 
   </g>

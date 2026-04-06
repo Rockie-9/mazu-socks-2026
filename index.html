@@ -195,6 +195,14 @@ section p strong{color:var(--b8)}
 .closing .orn-e .dia{width:5px;height:5px;background:var(--g4);transform:rotate(45deg);opacity:.4}
 
 @media print{.hero{min-height:auto;padding:40px 24px}.cta{background:var(--surface);color:var(--b8);border:2px solid var(--b7)}}
+
+/* Tab Navigation */
+.tab-nav{display:flex;justify-content:center;gap:0;margin:0 auto;max-width:680px;padding:0 24px}
+.tab-btn{flex:1;padding:14px 0;text-align:center;font-size:13px;letter-spacing:3px;color:var(--b4);cursor:pointer;border-bottom:2px solid transparent;transition:all .2s;background:none;border-top:none;border-left:none;border-right:none;font-family:var(--sans);font-weight:500}
+.tab-btn.active{color:var(--b7);border-bottom-color:var(--g5)}
+.tab-btn:hover{color:var(--b7)}
+.tab-panel{display:none}
+.tab-panel.active{display:block}
 </style>
 </head>
 <body>
@@ -216,6 +224,18 @@ section p strong{color:var(--b8)}
 </div></div>
 
 <div class="wrap">
+
+
+<!-- Tab Navigation -->
+<div style="background:var(--cream);padding:20px 0 0;border-bottom:1px solid var(--b1);position:sticky;top:0;z-index:100">
+  <div class="tab-nav">
+    <button class="tab-btn active" onclick="switchTab('main')">活動介紹</button>
+    <button class="tab-btn" onclick="switchTab('report')">結案報告</button>
+  </div>
+</div>
+
+<!-- TAB: 活動介紹 -->
+<div class="tab-panel active" id="tab-main">
 
 <!-- 緣起 -->
 <section>
@@ -276,7 +296,7 @@ section p strong{color:var(--b8)}
 <section>
   <div class="sl">結緣貼紙</div>
   <h2>每雙襪子，都帶著這張貼紙上路</h2>
-  <p>6 公分圓形透明貼紙，貼在每雙襪子的包裝上。掃描 QR Code 即可回到本頁了解活動全貌。</p>
+  <p>6 公分圓形透明貼紙，貼在每雙襪子的包裝上。為香燈腳護足結緣，也為偏鄉需求團體送暖。掃描 QR Code 即可回到本頁了解活動全貌。</p>
   <div style="display:flex;justify-content:center;padding:24px 0">
     <img src="sticker.png" alt="白沙屯媽祖進香結緣貼紙" style="width:220px;height:220px;border-radius:50%;box-shadow:0 4px 24px rgba(0,0,0,.08)">
   </div>
@@ -405,8 +425,108 @@ section p strong{color:var(--b8)}
 </div>
 <div style="height:40px"></div>
 </div>
+</div><!-- end tab-main -->
+
+<!-- TAB: 結案報告 -->
+<div class="tab-panel" id="tab-report">
+<div class="wrap" style="padding-top:40px">
+
+<section style="border-top:none">
+  <div class="sl">結案報告</div>
+  <h2>進香圓滿，感恩回報</h2>
+  <p>本報告將於 2026 年 4 月底前完成更新，完整記錄每一筆善款的流向和每一雙襪子的去處。</p>
+  <div class="co">最後更新：待進香結束後更新（預計 2026/04/30 前）</div>
+</section>
+
+<!-- Section 1: 活動總覽 -->
+<section>
+  <div class="sl">壹</div>
+  <h2>活動總覽</h2>
+  <div class="ic">
+    <div class="ic-item"><div class="lb">結緣總數</div><div class="vl">待更新</div></div>
+    <div class="ic-item"><div class="lb">發放天數</div><div class="vl">待更新</div></div>
+    <div class="ic-item"><div class="lb">路線覆蓋</div><div class="vl">苗栗 → 台中 → 彰化 → 雲林</div></div>
+    <div class="ic-item"><div class="lb">團隊人數</div><div class="vl">3 人（分批步行）</div></div>
+  </div>
+  <p style="color:var(--b5);font-size:13px;margin-top:16px">＊ 本區將記錄實際發出雙數、發放日期與路段、團隊分工等基本資訊。</p>
+</section>
+
+<!-- Section 2: 收支明細 -->
+<section>
+  <div class="sl">貳</div>
+  <h2>收支明細</h2>
+  <p>每一筆收入與支出，全數透明公開。</p>
+  <div class="bc">
+    <div class="br"><span>贊助收入（含匿名）</span><span class="am">待更新</span></div>
+    <div class="br"><span>襪子採購成本</span><span class="am">待更新</span></div>
+    <div class="br"><span>結緣貼紙印製</span><span class="am">待更新</span></div>
+    <div class="br"><span>包裝材料</span><span class="am">待更新</span></div>
+    <div class="br"><span>偏鄉捐贈物資 / 善款</span><span class="am">待更新</span></div>
+    <div class="bt"><span>結餘 / 處理方式</span><span>待更新</span></div>
+  </div>
+  <p style="color:var(--b5);font-size:13px;margin-top:16px">＊ 每一位贊助者的姓名（或匿名代號）與金額將逐筆列出。結餘款項將捐贈給沿線偏鄉社福團體。</p>
+</section>
+
+<!-- Section 3: 偏鄉捐贈紀錄 -->
+<section>
+  <div class="sl">參</div>
+  <h2>偏鄉捐贈紀錄</h2>
+  <p>物資與善款的具體去處，附上對接單位與簽收憑證。</p>
+  <div class="ol">
+    <div class="oi"><div class="mk"></div><div><div class="on">華山基金會 沿線天使站</div><div class="od">捐贈數量 / 金額：待更新　｜　簽收憑證：待補</div></div></div>
+    <div class="oi"><div class="mk"></div><div><div class="on">芳苑 / 褒忠鄉社區關懷據點</div><div class="od">捐贈數量 / 金額：待更新　｜　簽收憑證：待補</div></div></div>
+    <div class="oi"><div class="mk"></div><div><div class="on">雲林聖心社會關懷協會</div><div class="od">捐贈數量 / 金額：待更新　｜　簽收憑證：待補</div></div></div>
+  </div>
+  <p style="color:var(--b5);font-size:13px;margin-top:16px">＊ 具體對接單位及數量將於進香結束後確認，捐款收據或物資簽收照片將附於此處。</p>
+</section>
+
+<!-- Section 4: 現場紀錄 -->
+<section>
+  <div class="sl">肆</div>
+  <h2>現場紀錄</h2>
+  <p>進香路上的結緣瞬間，以及送到偏鄉長輩手中的溫暖畫面。</p>
+  <div style="background:var(--parchment);border-radius:10px;padding:40px 24px;text-align:center;margin:20px 0">
+    <div style="font-size:36px;margin-bottom:12px;opacity:.4">📷</div>
+    <p style="color:var(--b4);font-size:13px;margin:0">照片將於進香期間及結束後更新<br>預計 10–15 張精選紀錄</p>
+  </div>
+  <p style="color:var(--b5);font-size:13px">＊ 包含：每日發放現場、信徒收到襪子的表情、偏鄉長輩收到物資的畫面、團隊合照等。</p>
+</section>
+
+<!-- Section 5: 感恩名單 -->
+<section>
+  <div class="sl">伍</div>
+  <h2>感恩名單</h2>
+  <p>每一位贊助者的名字，都在這份名單上，跟著媽祖走完全程。</p>
+  <div style="background:var(--parchment);border-radius:10px;padding:28px 32px;margin:20px 0;position:relative">
+    <div style="position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--g4),var(--g7),var(--g4));border-radius:10px 10px 0 0"></div>
+    <p style="font-size:14px;color:var(--b7);text-align:center;line-height:2">待進香結束後公布完整名單<br><span style="font-size:12px;color:var(--b4)">（依贊助者意願選擇具名或匿名）</span></p>
+  </div>
+  <p style="color:var(--b5);font-size:13px">＊ 名單同時手寫一份紙本，8 天全程隨身攜帶，在北港朝天宮進火儀式時向媽祖稟報。</p>
+</section>
+
+</div><!-- end wrap -->
+
+<!-- Report closing -->
+<div class="closing">
+  <blockquote>「腳踏實地，平安順行。」</blockquote>
+  <div class="by"><a href="https://www.linkedin.com/in/aurora-lin-615056a7/" target="_blank" class="fn-link">Aurora Lin</a> · <a href="https://www.linkedin.com/in/rockie-esg-comms-digitaltransformation/" target="_blank" class="fn-link">Rockie Lin</a>　｜　2026 白沙屯媽祖丙午年北港進香</div>
+</div>
+<div style="height:40px"></div>
+</div><!-- end tab-report -->
 
 <script>
+
+// Tab switching
+function switchTab(tab) {
+  document.querySelectorAll('.tab-panel').forEach(p => p.classList.remove('active'));
+  document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+  document.getElementById('tab-' + tab).classList.add('active');
+  event.target.classList.add('active');
+  window.scrollTo({top: document.querySelector('.tab-nav').offsetTop - 10, behavior: 'smooth'});
+}
+// Check URL hash for direct link to report tab
+if (window.location.hash === '#report') { setTimeout(() => switchTab('report'), 100); }
+
 // ============================
 // CONFIG — 請替換以下兩個 URL
 // ============================
