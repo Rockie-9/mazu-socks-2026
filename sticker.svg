@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+     viewBox="0 0 660 660" width="780" height="780">
+  <defs>
+    <clipPath id="tc"><circle cx="330" cy="330" r="300"/></clipPath>
+    <clipPath id="bc"><circle cx="330" cy="330" r="330"/></clipPath>
+  </defs>
+
+  <circle cx="330" cy="330" r="330" fill="#F5E1DC" clip-path="url(#bc)"/>
+
+  <g clip-path="url(#tc)">
+
+    <!-- Palanquin background -->
+    <g transform="translate(330,250) scale(1.2)" opacity="0.32">
+      <line x1="-180" y1="-20" x2="-110" y2="-20" stroke="#C4887A" stroke-width="2.5" stroke-linecap="round" opacity="0.6"/>
+      <line x1="-170" y1="0" x2="-100" y2="0" stroke="#C4887A" stroke-width="2" stroke-linecap="round" opacity="0.5"/>
+      <line x1="-175" y1="20" x2="-115" y2="20" stroke="#C4887A" stroke-width="2.5" stroke-linecap="round" opacity="0.6"/>
+      <g transform="rotate(-3)">
+        <polygon points="0,-75 10,-60 -10,-60" fill="#B87A6E"/>
+        <rect x="-6" y="-78" width="12" height="8" rx="2" fill="#C9967E"/>
+        <path d="M-65,-55 L65,-55 L55,-40 L-55,-40 Z" fill="#D4A08E"/>
+        <rect x="-55" y="-40" width="110" height="70" rx="4" fill="#D4A08E"/>
+        <rect x="-48" y="-33" width="96" height="56" rx="3" fill="#E8C4B0"/>
+        <line x1="-30" y1="-33" x2="-30" y2="23" stroke="#C9967E" stroke-width="1.5" opacity="0.6"/>
+        <line x1="0" y1="-33" x2="0" y2="23" stroke="#C9967E" stroke-width="1.5" opacity="0.6"/>
+        <line x1="30" y1="-33" x2="30" y2="23" stroke="#C9967E" stroke-width="1.5" opacity="0.6"/>
+        <circle cx="0" cy="-5" r="14" fill="none" stroke="#C4887A" stroke-width="1.5" opacity="0.7"/>
+        <rect x="-60" y="30" width="120" height="12" rx="3" fill="#B8907E"/>
+        <line x1="-95" y1="10" x2="-60" y2="36" stroke="#A07060" stroke-width="5" stroke-linecap="round"/>
+        <line x1="60" y1="36" x2="95" y2="10" stroke="#A07060" stroke-width="5" stroke-linecap="round"/>
+        <g transform="rotate(8,-45,35)">
+          <line x1="-45" y1="30" x2="-45" y2="52" stroke="#C4887A" stroke-width="1"/>
+          <ellipse cx="-45" cy="58" rx="8" ry="10" fill="#D4A08E"/>
+        </g>
+        <g transform="rotate(-8,45,35)">
+          <line x1="45" y1="30" x2="45" y2="52" stroke="#C4887A" stroke-width="1"/>
+          <ellipse cx="45" cy="58" rx="8" ry="10" fill="#D4A08E"/>
+        </g>
+      </g>
+    </g>
+
+    <!-- CTA -->
+    <text x="330" y="82" text-anchor="middle" fill="#7A5C4F" font-size="15"
+      font-weight="500" font-family="Noto Sans CJK TC,sans-serif" letter-spacing="2">媽祖的愛 · 回饋鄉親</text>
+    <line x1="210" y1="95" x2="450" y2="95" stroke="#C4887A" stroke-width="0.6" opacity="0.3"/>
+
+    <!-- Main blessing — tightened -->
+    <text x="330" y="178" text-anchor="middle" fill="#3D2B20" font-size="64" font-weight="900"
+      font-family="Noto Serif CJK TC,serif" letter-spacing="8">腳踏實地</text>
+    <text x="330" y="250" text-anchor="middle" fill="#3D2B20" font-size="54" font-weight="700"
+      font-family="Noto Serif CJK TC,serif" letter-spacing="6">平安順行</text>
+
+    <!-- Mission tagline -->
+    <text x="330" y="285" text-anchor="middle" fill="#7A5C4F" font-size="12"
+      font-weight="400" font-family="Noto Sans CJK TC,sans-serif" letter-spacing="1.5" opacity="0.75">1,000 雙結緣 · 200 雙送暖偏鄉</text>
+
+    <line x1="240" y1="300" x2="420" y2="300" stroke="#C4887A" stroke-width="0.5" opacity="0.25"/>
+
+    <!-- QR CODE — 200 units = 20mm on finished sticker -->
+    <rect x="230" y="312" width="200" height="200" rx="6" fill="white"/>
+    <image x="236" y="318" width="188" height="188" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAkQAAAJEAQMAAADNLqkZAAAABlBMVEU9KyD///8LHjqFAAACOklEQVR42u3dMW7DMAwFUKMX8P1vqRu4QZDWFsm4LVCAGp6HIK3jN2j4IBhK2bZ47cfjGt/vHtf57ryRHts+tv+6SCQSifSn6wzpM7Mfcf16mW7U2f7804qTSCRSY45f3+0puJ/3XqX49sr29JgVJ5FIpJVyfGqfXAvvcf2cHCeRSKSlc/w+wuU4iUQirZPjqQ2eY/3M9tB/0R8nkUik5hyvyvNfvFhxEolEWiLHj9vr9ZHx84eHFSeRSKSmejx0TqYBlXrkcEtTiXKcRCKRmnP8KHrhYZJ8+l+KeitOIpFIXX2VkM976JcUJXupWHESiURqyvHQOQm98Dc7O6dSXI6TSCRScz0eiu20n3MK7tRXGVacRCKR2nN8aqSEUvztmSu+5ySRSKT+HE/T4OFsw+kjYavQ1C634iQSidSU42dlfsx9732u0Ued/F93rTiJRCKtkOPVts3r15nV/LgcJ5FIpMYcr6fBpz0/b7fkmx8nkUikFerxaoqw6rBUk+SXSUUrTiKRSE31+HFzzPi1KK+6KYccJ5FIpBXq8fAutFTqXsv5xG7ukEQikZrr8eqUw2ui57nDdFi5FSeRSKSuejyX52HG8Ob3gHbzKiQSidSe4z/+HlCd3qHDYsVJJBKpMcdDcFf7gJ5X1R83d0gikUjL5fjNPqAxP7F9B7y+ColEIq1Uj4/ixna7S8iKk0gkUmOOp8PFw9xh/vWIdEKiepxEIpG6cvxNeZ7OUhmpPz6dXW7FSSQSqUP6BDYJA5fVcfefAAAAAElFTkSuQmCC"/>
+
+    <!-- Scan instruction -->
+    <text x="330" y="535" text-anchor="middle" fill="#7A5C4F" font-size="12"
+      font-weight="400" font-family="Noto Sans CJK TC,sans-serif" letter-spacing="1" opacity="0.7">掃碼了解詳情與贊助方式</text>
+
+    <!-- Bottom -->
+    <text x="330" y="575" text-anchor="middle" fill="#C4887A" font-size="10"
+      font-weight="400" font-family="Noto Sans CJK TC,sans-serif" letter-spacing="2" opacity="0.45">丙午年 · 白沙屯媽祖北港進香</text>
+    <text x="330" y="595" text-anchor="middle" fill="#C4887A" font-size="9"
+      font-weight="400" font-family="Noto Sans CJK TC,sans-serif" letter-spacing="1.5" opacity="0.3">2026.04.12 – 04.20</text>
+
+  </g>
+</svg>
