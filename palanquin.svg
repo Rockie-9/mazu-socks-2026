@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-200 -100 400 220" width="400" height="220">
+  <!-- 粉紅超跑 — Palanquin Moving Illustration -->
+  <g opacity="0.85">
+    <!-- Speed lines -->
+    <line x1="-180" y1="-20" x2="-110" y2="-20" stroke="#C4887A" stroke-width="2.5" stroke-linecap="round" opacity="0.6"/>
+    <line x1="-170" y1="0" x2="-100" y2="0" stroke="#C4887A" stroke-width="2" stroke-linecap="round" opacity="0.5"/>
+    <line x1="-175" y1="20" x2="-115" y2="20" stroke="#C4887A" stroke-width="2.5" stroke-linecap="round" opacity="0.6"/>
+    <line x1="-160" y1="-40" x2="-120" y2="-40" stroke="#C4887A" stroke-width="1.5" stroke-linecap="round" opacity="0.4"/>
+    <line x1="-165" y1="40" x2="-125" y2="40" stroke="#C4887A" stroke-width="1.5" stroke-linecap="round" opacity="0.4"/>
+
+    <g transform="rotate(-3)">
+      <!-- Roof ornament -->
+      <polygon points="0,-75 10,-60 -10,-60" fill="#B87A6E"/>
+      <rect x="-6" y="-78" width="12" height="8" rx="2" fill="#C9967E"/>
+      <!-- Upper roof -->
+      <path d="M-65,-55 L65,-55 L55,-40 L-55,-40 Z" fill="#D4A08E"/>
+      <path d="M-68,-55 Q-72,-48 -65,-45" fill="none" stroke="#C4887A" stroke-width="2"/>
+      <path d="M68,-55 Q72,-48 65,-45" fill="none" stroke="#C4887A" stroke-width="2"/>
+      <!-- Canopy body -->
+      <rect x="-55" y="-40" width="110" height="70" rx="4" fill="#D4A08E"/>
+      <rect x="-48" y="-33" width="96" height="56" rx="3" fill="#E8C4B0"/>
+      <!-- Curtain lines -->
+      <line x1="-30" y1="-33" x2="-30" y2="23" stroke="#C9967E" stroke-width="1.5" opacity="0.6"/>
+      <line x1="0" y1="-33" x2="0" y2="23" stroke="#C9967E" stroke-width="1.5" opacity="0.6"/>
+      <line x1="30" y1="-33" x2="30" y2="23" stroke="#C9967E" stroke-width="1.5" opacity="0.6"/>
+      <!-- Deity circle -->
+      <circle cx="0" cy="-5" r="14" fill="none" stroke="#C4887A" stroke-width="1.5" opacity="0.7"/>
+      <!-- Base -->
+      <rect x="-60" y="30" width="120" height="12" rx="3" fill="#B8907E"/>
+      <!-- Carrying poles -->
+      <line x1="-95" y1="10" x2="-60" y2="36" stroke="#A07060" stroke-width="5" stroke-linecap="round"/>
+      <line x1="60" y1="36" x2="95" y2="10" stroke="#A07060" stroke-width="5" stroke-linecap="round"/>
+      <!-- Lanterns swinging -->
+      <g transform="rotate(8,-45,35)">
+        <line x1="-45" y1="30" x2="-45" y2="52" stroke="#C4887A" stroke-width="1"/>
+        <ellipse cx="-45" cy="58" rx="8" ry="10" fill="#D4A08E"/>
+        <ellipse cx="-45" cy="58" rx="5" ry="7" fill="#E8C4B0"/>
+      </g>
+      <g transform="rotate(-8,45,35)">
+        <line x1="45" y1="30" x2="45" y2="52" stroke="#C4887A" stroke-width="1"/>
+        <ellipse cx="45" cy="58" rx="8" ry="10" fill="#D4A08E"/>
+        <ellipse cx="45" cy="58" rx="5" ry="7" fill="#E8C4B0"/>
+      </g>
+    </g>
+
+    <!-- Dust particles -->
+    <circle cx="-130" cy="30" r="3" fill="#C4887A" opacity="0.3"/>
+    <circle cx="-145" cy="10" r="2" fill="#C4887A" opacity="0.25"/>
+    <circle cx="-125" cy="-15" r="2.5" fill="#C4887A" opacity="0.2"/>
+    <circle cx="-140" cy="45" r="2" fill="#C4887A" opacity="0.2"/>
+  </g>
+</svg>
