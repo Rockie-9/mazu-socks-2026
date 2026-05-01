@@ -203,6 +203,27 @@ section p strong{color:var(--b8)}
 .tab-btn:hover{color:var(--b7)}
 .tab-panel{display:none}
 .tab-panel.active{display:block}
+/* Gallery + Lightbox */
+.gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin:20px 0}
+@media (max-width:600px){.gallery{grid-template-columns:repeat(2,1fr);gap:6px}}
+.gi{position:relative;cursor:pointer;overflow:hidden;border-radius:6px;aspect-ratio:1;background:var(--parchment)}
+.gi img{width:100%;height:100%;object-fit:cover;transition:transform .4s ease;display:block}
+.gi:hover img{transform:scale(1.06)}
+.gi .cap{position:absolute;bottom:0;left:0;right:0;background:linear-gradient(to top,rgba(0,0,0,.78) 0,rgba(0,0,0,.4) 60%,transparent);color:#fff;padding:18px 10px 8px;font-size:11px;letter-spacing:1px;font-weight:500;opacity:0;transition:opacity .3s}
+.gi:hover .cap{opacity:1}
+@media (max-width:600px){.gi .cap{opacity:1;font-size:10px;padding:14px 8px 6px}}
+.lb{display:none;position:fixed;inset:0;background:rgba(20,10,18,.95);z-index:9999;align-items:center;justify-content:center;cursor:pointer;padding:20px}
+.lb.active{display:flex}
+.lb-inner{position:relative;max-width:95vw;max-height:90vh;display:flex;flex-direction:column;align-items:center;cursor:default}
+.lb img{max-width:100%;max-height:80vh;object-fit:contain;border-radius:4px;box-shadow:0 12px 60px rgba(0,0,0,.6)}
+.lb-cap{color:#f5e8d8;text-align:center;margin-top:14px;font-size:13px;letter-spacing:2px;font-family:var(--serif)}
+.lb-counter{color:#a89890;font-size:11px;letter-spacing:1px;margin-top:4px}
+.lb-close{position:absolute;top:-12px;right:-8px;background:rgba(255,255,255,.1);color:#fff;border:none;width:36px;height:36px;border-radius:50%;cursor:pointer;font-size:20px;backdrop-filter:blur(8px)}
+.lb-prev,.lb-next{position:absolute;top:50%;transform:translateY(-50%);background:rgba(255,255,255,.08);color:#fff;border:none;width:44px;height:44px;border-radius:50%;cursor:pointer;font-size:20px;backdrop-filter:blur(8px);transition:background .2s}
+.lb-prev:hover,.lb-next:hover{background:rgba(255,255,255,.18)}
+.lb-prev{left:-60px}
+.lb-next{right:-60px}
+@media (max-width:768px){.lb-prev{left:8px}.lb-next{right:8px}}
 </style>
 </head>
 <body>
@@ -497,12 +518,34 @@ section p strong{color:var(--b8)}
 <section>
   <div class="sl">肆</div>
   <h2>現場紀錄</h2>
-  <p>進香路上的結緣瞬間，以及送到偏鄉長輩手中的溫暖畫面。</p>
-  <div style="background:var(--parchment);border-radius:10px;padding:40px 24px;text-align:center;margin:20px 0">
-    <div style="font-size:36px;margin-bottom:12px;opacity:.4">📷</div>
-    <p style="color:var(--b4);font-size:13px;margin:0">照片將於進香期間及結束後更新<br>預計 10–15 張精選紀錄</p>
+  <p>進香路上的結緣瞬間，從起駕日的陣頭護駕、沿途的香燈腳結緣，到夜宿香客大樓、最終抵達北港朝天宮——共 15 個畫面，記錄這一路的善意流動。</p>
+
+  <div class="gallery">
+    <div class="gi" onclick="openLightbox(0)"><img src="closing-photos/01-departure-procession.jpg" alt="起駕日陣頭護駕" loading="lazy"><div class="cap">起駕日｜陣頭護駕</div></div>
+    <div class="gi" onclick="openLightbox(1)"><img src="closing-photos/13-give-and-blessing.jpg" alt="雙手結緣" loading="lazy"><div class="cap">沿途｜雙手結緣</div></div>
+    <div class="gi" onclick="openLightbox(2)"><img src="closing-photos/02-distribution-elderly.jpg" alt="與長輩結緣" loading="lazy"><div class="cap">沿途｜與長輩結緣</div></div>
+    <div class="gi" onclick="openLightbox(3)"><img src="closing-photos/06-roadside-blessing.jpg" alt="單車香燈腳結緣" loading="lazy"><div class="cap">沿途｜單車香燈腳</div></div>
+    <div class="gi" onclick="openLightbox(4)"><img src="closing-photos/12-formation-march.jpg" alt="黃衣陣頭" loading="lazy"><div class="cap">沿途｜聖母旗幟引領</div></div>
+    <div class="gi" onclick="openLightbox(5)"><img src="closing-photos/03-volunteer-team.jpg" alt="志工團隊" loading="lazy"><div class="cap">志工｜輪椅同行</div></div>
+    <div class="gi" onclick="openLightbox(6)"><img src="closing-photos/10-rest-camp-night.jpg" alt="夜宿香客大樓" loading="lazy"><div class="cap">夜宿｜為香燈腳遞襪</div></div>
+    <div class="gi" onclick="openLightbox(7)"><img src="closing-photos/05-night-procession.jpg" alt="夜行抬轎" loading="lazy"><div class="cap">夜行｜鑾轎抬轎</div></div>
+    <div class="gi" onclick="openLightbox(8)"><img src="closing-photos/14-baozun-arrival.jpg" alt="北港朝天宮抵達" loading="lazy"><div class="cap">圓滿｜北港朝天宮</div></div>
   </div>
-  <p style="color:var(--b5);font-size:13px">＊ 包含：每日發放現場、信徒收到襪子的表情、偏鄉長輩收到物資的畫面、團隊合照等。</p>
+
+  <div style="text-align:center;margin-top:20px">
+    <button onclick="toggleAllPhotos()" id="more-btn" style="background:none;border:1px solid var(--g4);color:var(--g7);padding:10px 24px;border-radius:99px;font-family:var(--sans);font-size:12px;letter-spacing:2px;cursor:pointer;transition:all .2s">看更多 6 張紀錄 ▾</button>
+  </div>
+
+  <div class="gallery" id="more-gallery" style="display:none;margin-top:16px">
+    <div class="gi" onclick="openLightbox(9)"><img src="closing-photos/04-temple-arrival.jpg" alt="鑾轎安座" loading="lazy"><div class="cap">拱天宮｜鑾轎安座</div></div>
+    <div class="gi" onclick="openLightbox(10)"><img src="closing-photos/07-distribution-station.jpg" alt="派發機能襪" loading="lazy"><div class="cap">沿途｜派發機能襪</div></div>
+    <div class="gi" onclick="openLightbox(11)"><img src="closing-photos/08-pilgrim-rest.jpg" alt="路邊休息" loading="lazy"><div class="cap">沿途｜短暫休息</div></div>
+    <div class="gi" onclick="openLightbox(12)"><img src="closing-photos/09-blue-bag-volunteer.jpg" alt="藍色大袋志工" loading="lazy"><div class="cap">志工｜結緣襪載運</div></div>
+    <div class="gi" onclick="openLightbox(13)"><img src="closing-photos/11-orange-bag-distribution.jpg" alt="橘色提袋派發" loading="lazy"><div class="cap">沿途｜橘色提袋派發</div></div>
+    <div class="gi" onclick="openLightbox(14)"><img src="closing-photos/15-luanchio-night.jpg" alt="夜訪鑾轎" loading="lazy"><div class="cap">圓滿｜拾捌萬感念</div></div>
+  </div>
+
+  <p style="color:var(--b5);font-size:13px;margin-top:24px">＊ 攝於 2026/04/12–04/20 白沙屯媽祖丙午年北港進香期間。點擊照片可放大檢視。</p>
 </section>
 
 <!-- Section 5: 感恩名單 -->
@@ -528,7 +571,79 @@ section p strong{color:var(--b8)}
 <div style="height:40px"></div>
 </div><!-- end tab-report -->
 
+<!-- Lightbox -->
+<div class="lb" id="lightbox" onclick="closeLightbox(event)">
+  <div class="lb-inner" onclick="event.stopPropagation()">
+    <button class="lb-close" onclick="closeLightbox()">×</button>
+    <button class="lb-prev" onclick="navLightbox(-1)">‹</button>
+    <button class="lb-next" onclick="navLightbox(1)">›</button>
+    <img id="lb-img" src="" alt="">
+    <div class="lb-cap" id="lb-cap"></div>
+    <div class="lb-counter" id="lb-counter"></div>
+  </div>
+</div>
+
 <script>
+// ============================
+// Photo gallery + lightbox
+// ============================
+const PHOTOS = [
+  {src:'closing-photos/01-departure-procession.jpg', cap:'起駕日｜陣頭護駕媽祖出發'},
+  {src:'closing-photos/13-give-and-blessing.jpg', cap:'沿途｜雙手結緣的瞬間'},
+  {src:'closing-photos/02-distribution-elderly.jpg', cap:'沿途｜與騎自行車的長輩分享'},
+  {src:'closing-photos/06-roadside-blessing.jpg', cap:'沿途｜單車香燈腳結緣'},
+  {src:'closing-photos/12-formation-march.jpg', cap:'沿途｜聖母旗幟引領前行'},
+  {src:'closing-photos/03-volunteer-team.jpg', cap:'志工｜輪椅同行繞境'},
+  {src:'closing-photos/10-rest-camp-night.jpg', cap:'夜宿｜為香燈腳遞上襪子'},
+  {src:'closing-photos/05-night-procession.jpg', cap:'夜行｜黃衣鑾轎手抬轎前進'},
+  {src:'closing-photos/14-baozun-arrival.jpg', cap:'圓滿｜抵達北港朝天宮'},
+  {src:'closing-photos/04-temple-arrival.jpg', cap:'拱天宮｜鑾轎安座'},
+  {src:'closing-photos/07-distribution-station.jpg', cap:'沿途｜將機能襪交到香燈腳手中'},
+  {src:'closing-photos/08-pilgrim-rest.jpg', cap:'沿途｜短暫休息的香燈腳'},
+  {src:'closing-photos/09-blue-bag-volunteer.jpg', cap:'志工｜藍色大袋裝載結緣襪'},
+  {src:'closing-photos/11-orange-bag-distribution.jpg', cap:'沿途｜橘色提袋準備分發'},
+  {src:'closing-photos/15-luanchio-night.jpg', cap:'圓滿｜拾捌萬感念見證'},
+];
+let lbIdx = 0;
+function openLightbox(i) {
+  lbIdx = i;
+  updateLightbox();
+  document.getElementById('lightbox').classList.add('active');
+  document.body.style.overflow = 'hidden';
+}
+function closeLightbox(e) {
+  if (e && e.target.id !== 'lightbox') return;
+  document.getElementById('lightbox').classList.remove('active');
+  document.body.style.overflow = '';
+}
+function navLightbox(dir) {
+  lbIdx = (lbIdx + dir + PHOTOS.length) % PHOTOS.length;
+  updateLightbox();
+}
+function updateLightbox() {
+  const p = PHOTOS[lbIdx];
+  document.getElementById('lb-img').src = p.src;
+  document.getElementById('lb-img').alt = p.cap;
+  document.getElementById('lb-cap').textContent = p.cap;
+  document.getElementById('lb-counter').textContent = (lbIdx+1) + ' / ' + PHOTOS.length;
+}
+function toggleAllPhotos() {
+  const more = document.getElementById('more-gallery');
+  const btn = document.getElementById('more-btn');
+  if (more.style.display === 'none') {
+    more.style.display = 'grid';
+    btn.textContent = '收合 ▴';
+  } else {
+    more.style.display = 'none';
+    btn.textContent = '看更多 6 張紀錄 ▾';
+  }
+}
+document.addEventListener('keydown', (e) => {
+  if (!document.getElementById('lightbox').classList.contains('active')) return;
+  if (e.key === 'Escape') closeLightbox();
+  if (e.key === 'ArrowLeft') navLightbox(-1);
+  if (e.key === 'ArrowRight') navLightbox(1);
+});
 
 // Tab switching
 function switchTab(tab) {
